@@ -4,6 +4,12 @@ import java.util.List;
 
 import org.hibernate.Session;
 
+/**
+ * Implementación del DAO de Customer
+ * 
+ * @author manoli
+ *
+ */
 public class CustomerDaoImpl extends CommonDaoImpl<Customer> implements CustomerDaoI {
 
 	/** Sesión de conexión a la BBDD. */

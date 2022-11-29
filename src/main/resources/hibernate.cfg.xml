@@ -14,8 +14,7 @@
 		<property name="show_sql">true</property>
 
 		<!-- Mapeo -->
-		<mapping
-			class="com.nttdata.nttdatacenters.hibernate.persistence.Customer" />
+		<mapping class="com.nttdata.nttdatacenters.hibernate.persistence.Customer" />
 
 	</session-factory>
 </hibernate-configuration>

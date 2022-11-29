@@ -3,6 +3,12 @@ package com.nttdata.nttdatacenters.hibernate.services;
 import java.util.List;
 import com.nttdata.nttdatacenters.hibernate.persistence.Customer;
 
+/**
+ * Interface del servicio de cliente.
+ * 
+ * @author manoli
+ *
+ */
 public interface CustomerManagementServiceI {
 
 	/**
@@ -47,7 +53,7 @@ public interface CustomerManagementServiceI {
 	 * @param name
 	 * @param firstSurname
 	 * @param secondSurname
-	 * @return Customer
+	 * @return List <Customer>
 	 */
 	public List<Customer> searchByNameAndSurnames(String name, String firstSurname, String secondSurname);
 

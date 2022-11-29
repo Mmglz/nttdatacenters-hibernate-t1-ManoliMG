@@ -16,6 +16,7 @@ import com.nttdata.nttdatacenters.hibernate.services.CustomerManagementServiceIm
  *
  */
 public class Main {
+	
 	/** LOGGER **/
 	private static final Logger LOG = LoggerFactory.getLogger(Main.class);
 	
@@ -83,14 +84,16 @@ public class Main {
 		LOG.info("Fin generación de clientes");
 
 		LOG.info("Inicio inserciones de clientes");
+		
 		// Inserciones de los clientes.
 		customerService.insertNewCustomer(customer1);
 		customerService.insertNewCustomer(customer2);
 		customerService.insertNewCustomer(customer3);
 		customerService.insertNewCustomer(customer4);
 		customerService.insertNewCustomer(customer5);
+		
 		LOG.info("Fin inserciones de clientes");
-
+		
 		LOG.info("Inicio de consultas y modificaciones de los clientes");
 		
 		// Consulta de todos los clientes.
@@ -98,7 +101,7 @@ public class Main {
 		System.out.println("Lista de todos los clientes: ");
 		for (final Customer customers : customersList) {
 			
-			System.out.println(customers.getId() + " " + customers.getDni() + " "+ customers.getName()+ " "
+			System.out.println(customers.getCustomerId() + " " + customers.getDni() + " "+ customers.getName()+ " "
 					+ customers.getFirstSurname() + " "+ customers.getSecondSurname());
 			System.out.println("\n");
 		}
@@ -120,10 +123,12 @@ public class Main {
 		List<Customer> searchNameAndSurnames = customerService.searchByNameAndSurnames("Maria", "Perez", "Garcia");
 		System.out.println("Consulta por nombre y apellidos:");
 		System.out.println(searchNameAndSurnames);
+		
 		LOG.info("Fin de consultas y modificaciones de los clientes");
 		
 		// Cierre de sesión.
 		session.close();
+		
 		LOG.info("TRAZA DE FIN");
 	}
 }

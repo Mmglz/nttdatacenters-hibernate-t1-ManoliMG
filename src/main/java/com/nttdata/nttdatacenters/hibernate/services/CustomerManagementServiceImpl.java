@@ -53,7 +53,7 @@ public class CustomerManagementServiceImpl implements CustomerManagementServiceI
 		// Verificación de nulidad y existencia.
 		if ((deleteCustomer != null && deleteCustomer.getCustomerId() != null)) {
 
-			// Eliminaciñon de un cliente.
+			// Eliminación de un cliente.
 			customerDao.delete(deleteCustomer);
 		}
 	}
